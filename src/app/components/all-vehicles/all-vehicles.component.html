@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="ml-3 mt-2">
+        <button type="button" class="btn btn-primary mb-2 mt-3">Export vehicles</button>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Reg number</th>
+                <th scope="col">Make</th>
+                <th scope="col">Model</th>
+                <th scope="col">Service interval</th>
+                <th scope="col">Current Milleage</th>
+                <th scope="col">Tank capacity</th>
+                <th scope="col">No of tyres</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let vehicle of vehicleList; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{vehicle.registrationNumber}}</td>
+                <td>{{vehicle.make}}</td>
+                <td>{{vehicle.model}}</td>
+                <td>{{vehicle.serviceInterval}}</td>
+                <td>{{vehicle.currentMilleage}}</td>
+                <td>{{vehicle.tankCapacity}}</td>
+                <td>{{vehicle.numberOfTyres}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
